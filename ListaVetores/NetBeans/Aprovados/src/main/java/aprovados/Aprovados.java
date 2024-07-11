@@ -18,6 +18,7 @@ public class Aprovados {
         double vetNota1[] = new double[qtdAlunos];
         double vetNota2[] = new double[qtdAlunos];
         double notaIndividual[] = new double[qtdAlunos];
+        String aprovados[] = new String[qtdAlunos];
         
         for(int i = 0; i < qtdAlunos; i++) {
             System.out.println("Digite nome, primeira e segunda nota do " + (i + 1) + "o do aluno: ");
@@ -29,14 +30,21 @@ public class Aprovados {
             somaNotas += (vetNota1[i] + vetNota2[i]);
         }
         
-        mediaTurma = somaNotas/qtdAlunos;
+        mediaTurma = somaNotas/(qtdAlunos*2);
+        
+        System.out.println("MEDIA DA TURMA: " + mediaTurma);
         
         System.out.println("APROVADOS: ");
         
         for(int i = 0; i < qtdAlunos; i++) {
-           if(notaIndividual[i] > mediaTurma) {
-               System.out.println("ok");
-           }
+            if(notaIndividual[i] >= mediaTurma) {
+                aprovados[i] = vetAlunos[i];
+            }
+        }
+        
+        for(int i = 0; i < qtdAlunos; i++) {
+            System.out.println(aprovados[i]);
+        }
         }
     }
-}
+
