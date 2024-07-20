@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Exercicio3 {
  public static void main(String[] args) {
+   /*Crie um programa que leia o nome e o salário de um funcionário, mostrando no final uma mensagem. */
     Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
     System.out.print("Nome do funcionario: ");
     String nome = scanner.next();
